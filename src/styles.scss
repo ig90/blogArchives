@@ -1,2 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+
+$link-color: #607D8B;
+$link-color-hover: #37474F;
+
+.container {
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    li{
+        margin: 5px;
+    }
+}
+a {
+    color: $link-color;
+    position: relative;
+}
+a:hover {
+    color: $link-color-hover;
+    text-decoration: none;
+}
+a:hover::before {
+    content: '>';
+    position: absolute;
+    left: -1em;
+}
